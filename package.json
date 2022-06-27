@@ -1,6 +1,6 @@
 {
   "name": "weather-cli-iv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for get weather",
   "main": "weather.js",
   "type": "module",
