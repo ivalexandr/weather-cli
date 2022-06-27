@@ -52,12 +52,14 @@ const getForcast = async () => {
 const initCLI = () => {
   const args = getArgs(process.argv)
   if (args.h) {
-    printHelp()
-  } else if (args.s) {
-    saveCity(args.s)
-  } else if (args.t) {
-    saveToken(args.t)
+    return printHelp()
   }
-  getForcast()
+  if (args.s) {
+    return saveCity(args.s)
+  }
+  if (args.t) {
+    return saveToken(args.t)
+  }
+  return getForcast()
 }
 initCLI()
